@@ -3,17 +3,70 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
   <tabs>
-    <Tab text="Basic Information">
+    <Tab text="Basic Animal Information">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <BorderPane layoutX="407.0" layoutY="207.0" prefHeight="769.6" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <bottom>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="64.0" prefWidth="116.0" text="New" />
+                              <Button layoutX="592.0" layoutY="28.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="116.0" text="Save" />
+                              <Button layoutX="650.0" layoutY="28.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="116.0" text="Save Edit" />
+                              <Button layoutX="476.0" layoutY="28.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="116.0" text="Delete" />
+                              <Button layoutX="766.0" layoutY="28.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="116.0" text="Previous" />
+                              <Button layoutX="824.0" layoutY="28.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="116.0" text="Next" />
+                           </children>
+                        </HBox>
+                     </bottom>
+                     <center>
+                        <SplitPane dividerPositions="0.4945226917057903" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="709.0" fitWidth="637.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../testimage.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="183.0" layoutY="76.0" prefHeight="668.0" prefWidth="643.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label text="Name" />
+                                          <TextField />
+                                          <Label text="Age" />
+                                          <TextField />
+                                          <Label text="Weight" />
+                                          <TextField />
+                                          <Label text="Breed" />
+                                          <TextField />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </center>
+                  </BorderPane>
+               </children></AnchorPane>
       </content>
     </Tab>
     <Tab text="Vet Notes">
@@ -23,7 +76,7 @@
                   <VBox alignment="CENTER" layoutX="513.0" layoutY="185.0" prefHeight="769.6" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <Label text="Notes from Veterinarian" />
-                        <Separator prefHeight="20.0" prefWidth="1280.0" />
+                        <Separator prefHeight="0.0" prefWidth="1280.0" />
                         <Label text="Dog Name" />
                         <TextArea prefHeight="671.0" prefWidth="1280.0" />
                         <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="177.0" text="Save" />
